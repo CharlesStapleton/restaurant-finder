@@ -1,9 +1,7 @@
 body{
   width: 1000px;
   height: 100%;
-  background-image: url('../IMG/spaceneedle.jpg');
-  background-color: #cccccc;
-  background-repeat: repeat;
+  background-color: white;
   background-size: 100%;
   background-position: center;
   opacity: .9;
@@ -15,39 +13,14 @@ body{
 header{
   height:100px;
   margin-bottom:0px;
-  background-color: black;
   height: 70px;
 }
 
-p {
+#para {
   font-size: 25px;
-  border: 1px solid rgb(10, 10, 10);
-  border-radius: 5px;
   padding: 10px;
-  /* box-shadow: 5px 10px lightblue; */
-  font-family: 'Courier New', Courier, monospace;
-  /* width: 100px;
-    height: 100px; */
-    background: red;
-    position: relative;
-    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
-    animation: mymove 5s infinite;
-    background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #e7ecf1; /* Grey text */
+  font-family: 'Domine', serif;  
 }
-
-/* Safari 4.0 - 8.0 */
-/* @-webkit-keyframes mymove {
-    from {left: 0px;}
-    to {left: 50px;}
-}
-
-@keyframes mymove {
-    from {left: 0px;}
-    to {left: 50px;}
-} */
-
 
 blockquote{
   margin-top:10px;
@@ -66,7 +39,7 @@ blockquote{
   position: relative;
  
 }
-#headermap { background-color: black;
+#headermap { 
   width:100%;
   height: 50px;
   margin-bottom:20px;
@@ -81,7 +54,7 @@ nav li {
     height: 10px;
     padding: 12px 18px 8px 18px;
     vertical-align: middle;
-    color:white;
+    color: black;
     font-size: 20px;
     text-decoration: none;
   }
@@ -100,7 +73,7 @@ nav li {
   }
 
   #restaurant-filter{
-    margin-top: 12px;
+    /* margin-top: 12px; */
     float:right;
  -webkit-appearance: menulist;
  -moz-appearance: menulist;
@@ -110,20 +83,20 @@ nav li {
  -moz-padding-end: 20px;
  -webkit-padding-start: 2px;
  -moz-padding-start: 2px;
- background-color: black; 
  background-position: center right;
  background-repeat: no-repeat;
  border: 0px solid #AAA;
- background-color:black;
- color: white;
+ background-color: white;
+ color: black;
  font-size: 20px;
- width: 200px;
- /* margin: 0px, 0px, 0px, 0px; */
+ width: 225px;
  overflow: hidden;
- padding-top: 2px;
- padding-bottom: 2px;
+  padding-top: 12px;
  text-overflow: ellipsis;
  white-space: nowrap;
+}
+select{
+  margin-top:12px;
 }
      
   #map {
@@ -131,15 +104,8 @@ nav li {
     width: 96%; 
     padding: 20px;
    }
-   #h1index{
-     padding:12px;
-     color:white;
-     font-family: 'Monoton', cursive;
-     font-size: 30px;
-     font-weight: lighter;
-   }
    
-h1 {
+ /* h1 {
   font-size: 18pt;
   font-weight: bold;
   margin-top: 20px;
@@ -147,6 +113,26 @@ h1 {
   text-align: center;
   font-size: 40px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}  */
+#h1index::first-letter{
+  padding:12px;
+  margin-left: 0;
+  color: rgb(17, 13, 7);
+  font-family: 'Domine', serif;
+  font-family: 'Bitter', serif;
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+#h1index::first-letter{
+  color: red;
+  padding:12px;
+  margin-left: 0;
+  color: rgb(17, 13, 7);
+  font-family: 'Domine', serif;
+  font-family: 'Bitter', serif;
+  font-size: 30px;
+  font-weight: lighter;
 }
 
 #detailsH1 {

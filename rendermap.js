@@ -32,7 +32,7 @@ var initMap = function(){
 
   var options = {
     center: seattle, //SEATTLE COORDINATES
-    zoom: 12,
+    zoom: 14,
     mapTypeId: 'roadmap'
   };
 
@@ -72,7 +72,7 @@ var initMap = function(){
     google.maps.event.addListener(marker1, 'click', (function (marker1, map) {
       console.log('MARKER INFO',content);
       return function () {
-        console.log('Rmarker 1 gets pushed');
+        // console.log('Rmarker 1 gets pushed');
         var infoWindow = new google.maps.InfoWindow({
           content: contentString
         });
