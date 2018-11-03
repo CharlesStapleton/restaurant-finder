@@ -60,9 +60,7 @@ var initMap = function(){
       position: pos,
       customInfo: title,
       icon: 'IMG/small-logo.png',
-      // icon: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
       gestureHandling: 'cooperative',
-      // category: category,
       map: map
     });
 
@@ -71,7 +69,6 @@ var initMap = function(){
     var contentString = title;
 
     // Marker click listener
-
     google.maps.event.addListener(marker1, 'click', (function (marker1, map) {
       console.log('MARKER INFO',content);
       return function () {
@@ -80,30 +77,24 @@ var initMap = function(){
           content: contentString
         });
         infoWindow.open(map, marker1);
-        // map.panTo(this.getPosition());
-        // map.setZoom(12);
       };
     })(marker1, content));
   }
 };
 
 //Function to add marker to map
-
 var filterMarkers = function (selectedStore) {
   for (var i = 0; i < markers1.length; i++) {
     var marker = rmarkers1[i];
-    // If is same category or category not picked
-    // var markerTitle = marker.title.toString().toLowerCase().split(' ').join('');
-    // var selectedTitle = selectedStore.toString().toLowerCase().split(' ').join('');
-    // console.log('MARKERT TIEL');
+
     console.log(marker.title, selectedStore);
-    // console.log(marker.selectedStore, selectedStore);
-    // console.log(marker.selectedStore, selectedStore);
-    // console.log(marker);
+
+    // If is same category or category not picked
     if (marker.title === selectedStore || selectedStore.length === 0) {
       console.log('HITTING STORE');
       marker.setVisible(true);
     }
+
     // Categories don't match
     else {
       marker.setVisible(false);

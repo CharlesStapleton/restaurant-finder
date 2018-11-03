@@ -11,53 +11,45 @@
 </head>
 
 <body id="index-aside">
-    
-    <header id="headermap">
-      
-      <nav> 
-        <ul>        
-          <li id="aboutLi"><a href="about.html">About</a></li>
-          <li id="detailsLi"><a href="details.html">Restaurant Details</a></li>
-          <li id="mapLi"><a class="active" href="index.html">Map</a></li>
-          <li> <div class="form-group" id="restaurant-code">
-              <select id="restaurant-filter" class="form-control" 
-              onchange="filterMarkers(this.value)">
-                <option id='stores'>Select your Restaurant</option>
-              
-          <option value="MOD Pizza">MOD Pizza</option>
-          <option value="Blue Water Taco Grill">Blue Water Taco Grill</option>
-          <option value="Caffe Ladro">Caffe Ladro</option>
-          <option value="Uptown Espresso Belltown">Uptown Espresso Belltown</option>
-          <option value="Bedlam Coffee">Bedlam Coffee </option>
-          <option value="Cafe Solstice">Cafe Solstice</option>
-          <option value="Bambinos Pizzeria">Bambinos Pizzeria</option>
-          <option value="Shiro’s Sushi">Shiro’s Sushi</option>
-          <option value="No Anchor">No Anchor</option>
-          <option value="Thai On One">Thai On One</option>
-          <option value="Rocco’s">Rocco’s</option>
-          <option value="Taqueria Cantina">Taqueria Cantina</option>
-          <option value="Plaza Garibaldi">Plaza Garibaldi</option>
-          <option value="Mantra Thai Restaurant & Bar">Mantra Thai Restaurant & Bar</option>
-          <option value="The 5 point Cafe">The 5 point Cafe</option>
-          <option value="Zeeks Pizza">Zeeks Pizza</option>
-          <option value="Green Leaf Vietnamese Restaurant">Green Leaf Vietnamese Restaurant</option>
-          <option value="Eastern Cafe">Eastern Cafe</option>
-          <option value="Tilikum Place Cafe">Tilikum Place Cafe</option>
-          <option value="Sugar Bakery & Coffeehouse">Sugar Bakery & Coffeehouse</option>
+  <header id="headermap">
+    <nav> 
+      <ul>        
+        <li id="aboutLi"><a href="about.html">About</a></li>
+        <li id="detailsLi"><a href="details.html">Restaurant Details</a></li>
+        <li id="mapLi"><a class="active" href="index.html">Map</a></li>
+
+        <li><div class="form-group" id="restaurant-code">
+          <select id="restaurant-filter" class="form-control" onchange="filterMarkers(this.value)">
+            <option id='stores'>Select your Restaurant</option>
+            <option value="MOD Pizza">MOD Pizza</option>
+            <option value="Blue Water Taco Grill">Blue Water Taco Grill</option>
+            <option value="Caffe Ladro">Caffe Ladro</option>
+            <option value="Uptown Espresso Belltown">Uptown Espresso Belltown</option>
+            <option value="Bedlam Coffee">Bedlam Coffee </option>
+            <option value="Cafe Solstice">Cafe Solstice</option>
+            <option value="Bambinos Pizzeria">Bambinos Pizzeria</option>
+            <option value="Shiro’s Sushi">Shiro’s Sushi</option>
+            <option value="No Anchor">No Anchor</option>
+            <option value="Thai On One">Thai On One</option>
+            <option value="Rocco’s">Rocco’s</option>
+            <option value="Taqueria Cantina">Taqueria Cantina</option>
+            <option value="Plaza Garibaldi">Plaza Garibaldi</option>
+            <option value="Mantra Thai Restaurant & Bar">Mantra Thai Restaurant & Bar</option>
+            <option value="The 5 point Cafe">The 5 point Cafe</option>
+            <option value="Zeeks Pizza">Zeeks Pizza</option>
+            <option value="Green Leaf Vietnamese Restaurant">Green Leaf Vietnamese Restaurant</option>
+            <option value="Eastern Cafe">Eastern Cafe</option>
+            <option value="Tilikum Place Cafe">Tilikum Place Cafe</option>
+            <option value="Sugar Bakery & Coffeehouse">Sugar Bakery & Coffeehouse</option>
           </select>
-          </div></li>
-        </ul>
-      </nav>
+        </div></li>
+      </ul>
+    </nav>
 
-      <h1 id="h1index">Restaurant Finder</h1>
-</header>
+    <h1 id="h1index">Restaurant Finder</h1>
+  </header>
 
-<p><br>This map provides information on different restauarants around Code Fellows. Select your preferred restaurant to find the location on the map.<br> </p>
-
-    </header>
-
-      <h1 id="h1index">Restaurant Finder</h1>
-</header>
+<p><br>This map provides information on different restauarants around Code Fellows. Select your preferred restaurant to find the location on the map.<br></p>
 
   <div id="floating-panel">
       <b>Start: </b>
@@ -81,20 +73,15 @@
 
     <div id="map"></div>
     <div id="distance"></div>
-    <section id="user-form-container" class="tab-content" style="display: block;">
-      </section>
+    <section id="user-form-container" class="tab-content" style="display: block;"></section>
+    <div class="form-group" id="restaurant-code">
 
-        <div class="form-group" id="restaurant-code">
-    
+  <!-- Load the API from the specified URL
+  * The async attribute allows the browser to render the page while the API loads
+  * The key parameter will contain your own API key 
+  * The callback parameter executes the initMap() function -->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0kHBkO9Rmi0fOKp4q5GlLZK6IgpX46z8&libraries=places&callback=initMap"></script> 
 
-    <!--Load the API from the specified URL
-    * The async attribute allows the browser to render the page while the API loads
-    * The key parameter will contain your own API key 
-    * The callback parameter executes the initMap() function
-    -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0kHBkO9Rmi0fOKp4q5GlLZK6IgpX46z8&libraries=places&callback=initMap">
-    </script> 
   <script src="js/app.js"></script>
   <script src="rendermap.js"></script>
   <script src="distance.js"></script> 
