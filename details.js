@@ -81,12 +81,13 @@ var restaurantSearchHandler = function(event) {
 searchWord.addEventListener('change', restaurantSearchHandler);
 
 //Function for clearing localStorage will be linked to button and have removeItem() and alert
+//function currently not being used
 var clearFunction = function() {
   location.reload();
   localStorage.clear('pastHistory');
   alert('Your Data Has Been Deleted');
 };
-
+// function not being used
 var pastHistory = function() {
   restPastSearches.push(JSON.parse(localStorage.getItem('pastHistory')));
   for(var i = 0; i < restPastSearches.length; i++) {
